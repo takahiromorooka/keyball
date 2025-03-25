@@ -70,22 +70,22 @@ void oledkit_render_info_user(void) {
 }
 #endif
 
-
+// See: https://github.com/qmk/qmk_firmware/blob/master/docs/keycodes.md
 const uint16_t PROGMEM tab[] = {KC_A, KC_S, COMBO_END};
 const uint16_t PROGMEM shit_tab[] = {KC_S, KC_D , COMBO_END};
 const uint16_t PROGMEM quotation[] = {KC_K, KC_L , COMBO_END};
 const uint16_t PROGMEM double_quotation[] = {KC_L, KC_SCLN , COMBO_END};
 const uint16_t PROGMEM hyphen[] = {KC_O, KC_P , COMBO_END};
 const uint16_t PROGMEM under_score[] = {KC_I, KC_O , COMBO_END};
-const uint16_t PROGMEM grave_accent[] = {KC_L, KC_SCLN , COMBO_END};
+const uint16_t PROGMEM grave_accent[] = {KC_Q, KC_W , COMBO_END};
 const uint16_t PROGMEM change_input_lang[] = {KC_D, KC_F, COMBO_END};
 combo_t key_combos[COMBO_COUNT] = {
     COMBO(tab, KC_TAB ),
-    COMBO(shit_tab, S(KC_TAB) ),
-    COMBO(quotation, KC_QUOT ),
-    COMBO(double_quotation, S(KC_QUOT) ),
+    COMBO(shit_tab, KC_LEFT_SHIFT(KC_TAB) ),
+    COMBO(quotation, KC_QUOTE ),
+    COMBO(double_quotation, KC_LEFT_SHIFT(KC_QUOTE) ),
     COMBO(hyphen, KC_MINS ),
-    COMBO(under_score, S(KC_MINS) ),
+    COMBO(under_score, KC_LEFT_SHIFT(KC_MINS) ),
     COMBO(grave_accent, KC_GRAVE ),
     COMBO(change_input_lang, LCTL_T(KC_SPC) ),
 };
