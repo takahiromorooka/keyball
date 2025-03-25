@@ -69,3 +69,10 @@ void oledkit_render_info_user(void) {
     keyball_oled_render_layerinfo();
 }
 #endif
+
+static PROGMEM comb_keys_t test_combo1 = {LSFT_T(KC_A), LT(1, KC_B), COMBO_END};
+static PROGMEM comb_keys_t test_combo2 = {LSFT_T(KC_A), LT(1, KC_B), KC_C, COMBO_END};
+combo_t key_combos[COMBO_COUNT] = {
+    [TEST_COMBO1] = COMBO(test_combo1, KC_ESC),
+    [TEST_COMBO2] = COMBO(test_combo2, KC_TAB),
+};
