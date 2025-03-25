@@ -70,9 +70,22 @@ void oledkit_render_info_user(void) {
 }
 #endif
 
-const uint16_t PROGMEM test_combo1[] = {KC_L, KC_SCLN , COMBO_END};
-const uint16_t PROGMEM test_combo2[] = {LSFT_T(KC_A), LT(1, KC_B), KC_C, COMBO_END};
+
+const uint16_t PROGMEM tab[] = {KC_A, KC_S, COMBO_END};
+const uint16_t PROGMEM shit_tab[] = {KC_S, KC_D , COMBO_END};
+const uint16_t PROGMEM quotation[] = {KC_K, KC_L , COMBO_END};
+const uint16_t PROGMEM double_quotation[] = {KC_L, KC_SCLN , COMBO_END};
+const uint16_t PROGMEM hyphen[] = {KC_O, KC_P , COMBO_END};
+const uint16_t PROGMEM under_score[] = {KC_I, KC_O , COMBO_END};
+const uint16_t PROGMEM grave_accent[] = {KC_L, KC_SCLN , COMBO_END};
+const uint16_t PROGMEM change_input_lang[] = {KC_D, KC_F, COMBO_END};
 combo_t key_combos[COMBO_COUNT] = {
-    COMBO(test_combo1, S(KC_7) ),
-    COMBO(test_combo2, KC_TAB),
+    COMBO(tab, KC_TAB ),
+    COMBO(shit_tab, S(KC_TAB) ),
+    COMBO(quotation, KC_QUOT ),
+    COMBO(double_quotation, S(KC_QUOT) ),
+    COMBO(hyphen, KC_MINS ),
+    COMBO(under_score, S(KC_MINS) ),
+    COMBO(grave_accent, KC_GRAVE ),
+    COMBO(change_input_lang, LCTL_T(KC_SPC) ),
 };
