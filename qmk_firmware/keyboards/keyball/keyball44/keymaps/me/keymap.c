@@ -94,5 +94,5 @@ combo_t key_combos[COMBO_COUNT] = {
     COMBO(hyphen, KC_MINS ),
     COMBO(under_score, S(KC_MINS) ),
     COMBO(grave_accent, KC_GRAVE ),
-    COMBO(change_input_lang, KC_LCTL(KC_SPC) ),
+    COMBO(change_input_lang, LCTL(KC_SPC) ),
 };
