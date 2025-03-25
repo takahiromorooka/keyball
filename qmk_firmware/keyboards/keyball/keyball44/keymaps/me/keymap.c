@@ -56,8 +56,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 const uint16_t PROGMEM test_combo1[] = {LSFT_T(KC_A), LT(1, KC_B), COMBO_END};
 const uint16_t PROGMEM test_combo2[] = {LSFT_T(KC_A), LT(1, KC_B), KC_C, COMBO_END};
 combo_t key_combos[] = {
-    COMBO(test_combo1, KC_ESC)
-    COMBO(test_combo2, KC_TAB)
+    [TEST_COMBO1] = COMBO(test_combo1, KC_ESC),
+    [TEST_COMBO2] = COMBO(test_combo2, KC_TAB),
 };
 
 layer_state_t layer_state_set_user(layer_state_t state) {
